@@ -13,6 +13,7 @@
 		B5DC07032881383D00B17C73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DC07012881383D00B17C73 /* Main.storyboard */; };
 		B5DC07052881383E00B17C73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5DC07042881383E00B17C73 /* Assets.xcassets */; };
 		B5DC07082881383E00B17C73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DC07062881383E00B17C73 /* LaunchScreen.storyboard */; };
+		B5DC07102881713B00B17C73 /* MixGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DC070F2881713B00B17C73 /* MixGesture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B5DC07042881383E00B17C73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5DC07072881383E00B17C73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5DC07092881383E00B17C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5DC070F2881713B00B17C73 /* MixGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixGesture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				B5DC06FB2881383D00B17C73 /* AppDelegate.swift */,
 				B5DC06FD2881383D00B17C73 /* SceneDelegate.swift */,
 				B5DC06FF2881383D00B17C73 /* ViewController.swift */,
+				B5DC070F2881713B00B17C73 /* MixGesture.swift */,
 				B5DC07012881383D00B17C73 /* Main.storyboard */,
 				B5DC07042881383E00B17C73 /* Assets.xcassets */,
 				B5DC07062881383E00B17C73 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DC07102881713B00B17C73 /* MixGesture.swift in Sources */,
 				B5DC07002881383D00B17C73 /* ViewController.swift in Sources */,
 				B5DC06FC2881383D00B17C73 /* AppDelegate.swift in Sources */,
 				B5DC06FE2881383D00B17C73 /* SceneDelegate.swift in Sources */,
@@ -304,7 +308,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +336,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,24 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="secondGestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O5g-ff-5OQ">
+                                <rect key="frame" x="87" y="497" width="124" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oKv-fE-dKr" appends="YES" id="bUr-zd-aod"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpT-fa-5nk">
+                                <rect key="frame" x="191" y="654" width="136" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Rsk-Jf-lx2" appends="YES" id="BG7-1s-30I"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4AL-e8-hYl">
+                                <rect key="frame" x="0.0" y="94" width="414" height="235"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="GOk-XN-oHR"/>
+                                    <constraint firstAttribute="height" constant="235" id="nk8-vA-nea"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Acj-QK-NzP" appends="YES" id="yzm-dY-rCx"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4AL-e8-hYl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="HuI-ro-YBF"/>
+                            <constraint firstItem="4AL-e8-hYl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="klC-nU-KAv"/>
+                            <constraint firstItem="4AL-e8-hYl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zua-8Y-Zif"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="O5g-ff-5OQ" id="3Cm-zJ-uaM"/>
+                        <outlet property="orangeView" destination="4AL-e8-hYl" id="DwS-WU-ACd"/>
+                        <outlet property="redView" destination="cpT-fa-5nk" id="HmV-dt-0dA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Rsk-Jf-lx2">
+                    <connections>
+                        <action selector="panAction:" destination="BYZ-38-t0r" id="Qbg-j7-HPN"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="AD7-jn-8YE"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="oKv-fE-dKr">
+                    <connections>
+                        <action selector="greenPanAction:" destination="BYZ-38-t0r" id="5y4-sH-DXx"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="uof-Dd-XIw"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="Acj-QK-NzP">
+                    <connections>
+                        <action selector="orangeViewTapGesture:" destination="BYZ-38-t0r" id="FBf-4X-QmS"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="CJG-IL-zf6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
